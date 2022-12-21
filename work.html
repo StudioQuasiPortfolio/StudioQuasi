@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="vieuwport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Portfolio Studio Quasi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body>
+<header>
+	<nav class="navbar">
+      <img src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/Logo_studio_quasi.png" class="logo">
+      <ul class="flex-container">
+        <li><a class="hover1 nav-link" href="contact.html">Talk to me</a></li>
+        <li><a class="hover1 nav-link" href="work.html">Project</a></li>
+        <li><a class="hover1 nav-link" href="about.html">Digital Gallery </a></li>
+        <li><a class="hover1 nav-link" href="index.html">Home</a></li>
+      </ul>
+ 	</nav>
+</header>
+
+
+
+		
+<main>
+  <article>
+    <div id="slideshow-container">
+
+  <img src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/DRAWJAM/Black sweater_V1.jpg" alt="Slide 2" class="slide_2">
+  <img src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/DRAWJAM/Example ticket.jpeg" alt="Slide 3" class="slide_3">
+  <img src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/DRAWJAM/Fanta limited edition.jpg" alt="Slide 4" class="slide_4">
+    <video autoplay loop muted plays-inline class="Slide_1" alt="Slide 1">
+    <source src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/DRAWJAM/AE_DRAWJAM_Website_1_nosound.mp4" type="video/mp4"> 
+  </video>
+	</div>
+
+
+<div class="arrow">
+<div id="left-arrow" class="arrow" onclick="prevElement()">&lt;</div>
+<div id="right-arrow" class="arrow" onclick="nextElement()">&gt;</div>
+</div>
+
+
+<script type="text/javascript">
+  // Get the arrow and slideshow container elements
+  const leftArrow = document.getElementById("left-arrow");
+  const rightArrow = document.getElementById("right-arrow");
+  const slideshow = document.getElementById("slideshow-container");
+  const elements = slideshow.children;
+  let current = 0;
+
+  // Define the nextElement and prevElement functions to advance or go back
+  // to the previous element in the slideshow
+  function nextElement() {
+    current = (current + 1) % elements.length;
+    updateSlideshow();
+  }
+
+  function prevElement() {
+    current = (current + elements.length - 1) % elements.length;
+    updateSlideshow();
+ 
+  }
+
+  // Define the updateSlideshow function to display the current element and hide the others
+
+  function updateSlideshow() {
+    for (let i = 1; i < elements.length; i++) {
+      if (i === current) {
+        elements[i].style.display = "block";
+
+        // Reset audio and video when the slide changes
+        if (elements[i].tagName === "AUDIO" || elements[i].tagName === "VIDEO") {
+          elements[i].currentTime = 1;
+        }
+      } else {
+        elements[i].style.display = "none";
+      }
+    }
+  }
+
+
+var video = document.querySelector("#slideshow-container video");
+  leftArrow.addEventListener("click", prevElement);
+  rightArrow.addEventListener("click", nextElement);
+
+
+</script>
+
+
+
+</article>
+</main>
+
+<footer>
+	<div class="footer">
+  <p> FIND ME ON IG: <a href="https://www.instagram.com/studio_quasi_/" class="Studio_quasi_">@STUDIO_QUASI_</a></p>
+	</div>
+</footer>
+</body>
+

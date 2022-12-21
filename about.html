@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="vieuwport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Portfolio Studio Quasi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+
+
+<header>
+		<video autoplay loop muted plays-inline class="bg-video">
+			<source src="/Users/maria-isabelindesteege/Desktop/Folder coding website/Afbeelding/BG_portfolio.mp4" type="video/mp4">
+		</video>
+    <nav class="navbar">
+      <img src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/Logo_studio_quasi.png" class="logo">
+      <ul class="flex-container">
+        <li><a class="hover1 nav-link" href="contact.html">Talk to me</a></li>
+        <li><a class="hover1 nav-link" href="work.html">Project</a></li>
+        <li><a class="hover1 nav-link" href="about.html">Digital Gallery </a></li>
+        <li><a class="hover1 nav-link" href="index.html">Home</a></li>
+      </ul>
+    </nav>
+</header>
+
+<main>
+	<article>
+		<h1 class="more-video">MORE VIDEOS</h1>
+		<h1 class="to-come">TO COME!</h1>
+
+	<div class="art-of-title-content">
+		<video id="art-of-title" alt="art-of-title">
+			<source src="/Users/maria-isabelindesteege/Desktop/Portfolio_website/Afbeelding/work/art-of-title project_Final_2.mp4" type="video/mp4">
+		</video>
+	<h2>The art of title </h2><br>
+	<p class="a-frame-by-frame"> A frame by frame animation.</p>
+
+	<div class="position-button-1">
+		<button onclick="playVideo()">Play</button>
+		<button onclick="pauseVideo()">Pause</button>
+	</div>
+
+	<script type="text/javascript">
+	  function playVideo() {
+    var video = document.getElementById("art-of-title");
+    video.play();
+  }
+
+  function pauseVideo() {
+    var video = document.getElementById("art-of-title");
+    video.pause();
+  } 
+	</script>
+<div>
+
+</article>
+</main>
+
+<footer>
+ 	<p>IN THE MEAN TIME FIND ME ON IG: <a href="https://www.instagram.com/studio_quasi_/" class="Studio_quasi_">@STUDIO_QUASI_</a></p>
+</footer>
+
+</body>
